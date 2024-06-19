@@ -1,0 +1,171 @@
+body {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            width: 100%;
+            background: #181818;
+            color: aliceblue;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #fff0f0;
+            padding-left: 8%;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+
+
+        }
+
+        h2 {
+            color: #fff0f0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        li {
+            width: 75%;
+            margin: auto;
+            list-style-type: none;
+        }
+
+        a {
+            font-size: 22px;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #fff0f0;
+        }
+
+        img {
+            display: none;
+        }
+
+        svg {
+            max-width: 46px;
+            margin-inline: auto;
+        }
+
+
+        .a-dif:hover {
+            transform: scale(3);
+            background: rgba(48, 41, 80, 0.3);
+            border-radius: 0% 15% 0% 15%;
+            padding: 2%;
+
+        }
+
+        .note {
+            color: red;
+            font-style: italic;
+        }
+
+        .main-grid-container {
+            display: grid;
+            grid-gap: 10px;
+            grid-column: 2 / 3;
+            background: #212121;
+            border: 1px solid #000000;
+            grid-template-rows: 6fr 5fr 24fr 7fr 8fr 19fr;
+            width: 100%;
+            height: 100%;
+        }
+
+        .grid-container-drives {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 100%;
+            height: 100%;
+            grid-gap: 10px;
+            border-bottom: 1px solid #000;
+        }
+
+        .grid-container-basic {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 100%;
+            height: 100%;
+            grid-gap: 10px;
+            border-bottom: 1px solid #000;
+            margin-bottom: -150px;
+        }
+
+        .grid-container-my {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 100%;
+            height: 100%;
+            grid-gap: 10px;
+            border-bottom: 1px solid #000;
+        }
+
+        .grid-container-coding {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 100%;
+            height: 100%;
+            grid-gap: 10px;
+            border-bottom: 1px solid #000;
+        }
+
+        .grid-container-game {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 100%;
+            height: 460px;
+            grid-gap: 10px;
+            border-bottom: 1px solid #000;
+            margin-top: -35px;
+        }
+
+        .grid-item {
+            display: grid;
+            width: 80%;
+            height: 70%;
+            margin: auto;
+            background: #8774E1;
+            border-radius: 0% 25% 0% 25%;
+            border: 1px solid #000000;
+            grid-template-rows: 2fr 5fr;
+        }
+
+        .a-wr:hover {
+
+        }
+
+        .grid-item-h1 {
+            width: 74%;
+            height: 65%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+        }
+
+        .grid-item-h1-1 {
+            width: 74%;
+            height: 65%;
+            margin: auto;
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+        }
+
+        .grid-items {
+            display: grid;
+            height: 100%;
+            width: 100%;
+        }
+
+        .Windows-Reinstalling {
+            border-bottom: 1px solid #000;
+            display: grid;
+            width: 100%;
+            height: 100%;
+            align-content: center;
+            align-items: center;
+        }
