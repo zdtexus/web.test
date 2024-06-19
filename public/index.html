@@ -1,89 +1,556 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой сайт</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.12.2/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.12.2/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <link rel="stylesheet" href="styles.css">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+</head>
+<body cz-shortcut-listen="true">
+
+<div class="main-grid-container">
+
+    <div class="Windows-Reinstalling">
+        <a class="a-wr" style="font-size: 60px;width: 100%;height: 100%;margin-left: 260px;" href="https://drive.google.com/file/d/1TA_fgFrRLR9yYSoL5e9B2VPF1gElnkGh/view?pli=1" target="_blank">
+            <svg viewBox="-2 -4 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" style="
+    max-width: 70px;
+">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.00003 12C6.00003 8.67198 8.64024 6 11.8655 6C14.03 6 15.9294 7.20124 16.9464 9L15 9L15 10.5L19.5 10.5L19.5 6L18 6L18 7.84807C16.6827 5.83414 14.4311 4.5 11.8655 4.5C7.78348 4.5 4.50003 7.87217 4.50003 12L6.00003 12Z" fill="#ffffff"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18 12C18 15.328 15.3598 18 12.1346 18C9.97007 18 8.0706 16.7988 7.05359 15L9.00003 15L9.00003 13.5L4.50003 13.5L4.50003 18L6.00003 18L6.00003 16.1519C7.31734 18.1659 9.56889 19.5 12.1346 19.5C16.2165 19.5 19.5 16.1278 19.5 12L18 12Z" fill="#ffffff"></path>
+                </g>
+            </svg>
+            Windows
+            Reinstalling </a>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
-</html>
+    <div class="grid-container-drives">
+
+        <div class="grid-item-h1">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21 9.75H19.5V18.3107L18.3107 19.5H5.68934L4.5 18.3107L4.5 9.75H3V4.5H21V9.75ZM6 9.75L18 9.75V17.6893L17.6893 18H6.31066L6 17.6893L6 9.75ZM19.5 6V8.25L4.5 8.25L4.5 6L19.5 6ZM9.75 13.5H15V12H9.75V13.5Z" fill="#ffffff"></path>
+                </g>
+            </svg>
+
+            <h1>Drivers</h1>
+        </div>
+
+            <div style="display: grid;width: 80%;height: 70%;margin: auto;background: #8774E1;border-radius: 5px 50px 5px;border: 1px solid #000000;grid-template-rows: 1fr 1fr;">
+
+            <div class="grid-items">
+            <li>
+                <a class="a-dif" href="https://www.iobit.com/downloadcenter.php?product=driver-booster-free-new"> Driver
+                    Booster
+                    <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                            <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                        </g>
+                    </svg>
+                </a>
+                <img src="" alt="">
+            </li>
+            <li>
+                <a class="a-dif" href="https://drivers.amd.com/drivers/installer/23.40/whql/amd-software-adrenalin-edition-24.5.1-minimalsetup-240514_web.exe ">
+                    AMD driver
+                    <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                            <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                        </g>
+                    </svg>
+                </a>
+                <img src="" alt="">
+            </li>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="grid-container-basic" style="
+">
+
+        <div class="grid-item-h1" style="margin-top: 25px;">
+
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#fffffffffff">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.24223 4.5H17.7578L19.5 8.85556V18L18.75 18.75H5.25L4.5 18V8.85556L6.24223 4.5ZM7.25777 6L6.35777 8.25H17.6422L16.7422 6H7.25777ZM18 9.75H6V17.25H18V9.75ZM9.59473 13.6553L10.6554 12.5946L11.25 13.1892V11.25H12.75V13.1894L13.3447 12.5946L14.4054 13.6553L12.0001 16.0606L9.59473 13.6553Z" fill="#ffffff"></path>
+                </g>
+            </svg>
+
+            <h1>Basic programs</h1>
+
+        </div>
+
+        <div style="display: grid;width: 80%;height: 70%;margin: auto;margin-top: 25px;background: #8774E1;border-radius: 5px 50px 5px;border: 1px solid #000000;grid-template-rows: 1fr 2fr;padding-bottom: 19px;">
+
+            <div class="grid-items" style="
+    margin-top: 10px;
+">
+                <li>
+                    <a class="a-dif" style="font-size: 27px" href="https://www.google.com/intl/ru/chrome/next-steps.html?statcb=1&amp;installdataindex=empty&amp;defaultbrowser=0#">Chrome
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <ul>
+                        <li style="padding-top: 5px; padding-bottom: 4px ;margin-left: 30px"><a style="color: #cfcfcf; font-size: 18px;" href="https://chromewebstore.google.com/detail/adblock-%E2%80%94-%D0%BD%D0%B0%D0%B9%D0%BA%D1%80%D0%B0%D1%89%D0%B8%D0%B9-%D0%B1%D0%BB%D0%BE%D0%BA%D1%83/gighmmpiobklfepjocnamgkkbiglidom">adblock
+                            <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                    <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        </li>
+                        <li style="padding-bottom: 4px;margin-left: 30px"><a class="a-dif" style="color: #cfcfcf; font-size: 18px" href="https://chromewebstore.google.com/detail/repeek-formerly-faceit-en/mokknliiomknodkdmpcellamkopbdmao">spokify
+                            <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                    <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        </li>
+                        <li style="padding-bottom: 4px;margin-left: 30px"><a class="a-dif" style="color: #cfcfcf; font-size: 18px;" href="https://chromewebstore.google.com/detail/spotify-ad-blocker-blocki/nfmlkliedggdodlbgghmmchhgckjoaml">spokify
+                            <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                    <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        </li>
+                        <li style="padding-bottom: 35px;margin-left: 30px"><a class="a-dif" style="color: #cfcfcf; font-size: 18px;" href="https://chromewebstore.google.com/detail/faceit-stats-by-eloking/pkhmoinpecjngkokbmjfdhgecfljcegi">faceit
+                            stats
+                            <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                    <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </a></li>
+                    </ul>
+                </li>
+            </div>
+
+
+            <div class="grid-items">
+                <li>
+                    <a href="https://cdn.discordapp.com/attachments/1104738989753258034/1223969120815546389/BoosterX.exe?ex=6672cc12&amp;is=66717a92&amp;hm=55f522d6dcb6c682da3050dce29a64407787f517e7669c3639ec5bcaf975f6ef&amp;" target="_blank">BoosterX
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <a href="https://www.revouninstaller.com/start-freeware-download/">RevoUninstallPro
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <a href="https://app.prntscr.com/build/setup-lightshot.exe">LightShot
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <a href="https://www.utorrent.com/web/#comparison-panels">Web Torrent
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <a href="https://www.7-zip.org/a/7z2406-x64.exe">7-Zip
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <a href="https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-701ru.exe">WinRAR
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <a href="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.8/npp.8.6.8.Installer.x64.exe">Notepad++
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="grid-container-my" style="
+    margin-top: 22px;
+">
+
+        <div class="grid-item-h1">
+
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 16.5L19.5 4.5L18.75 3.75H9L8.25 4.5L8.25 7.5L5.25 7.5L4.5 8.25V20.25L5.25 21H15L15.75 20.25V17.25H18.75L19.5 16.5ZM15.75 15.75L15.75 8.25L15 7.5L9.75 7.5V5.25L18 5.25V15.75H15.75ZM6 9L14.25 9L14.25 19.5L6 19.5L6 9Z" fill="#ffffff"></path>
+                </g>
+            </svg>
+
+            <h1>My programs</h1>
+
+        </div>
+
+        <div style="grid-template-rows: 1fr;" class="grid-item">
+            <ul>
+                <div class="grid-items">
+                    <li>
+                        <a href="https://telegram.org/dl/desktop/win64">Telegram
+                            <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                    <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <img src="" alt="">
+                    </li>
+                    <li>
+                        <a href="https://discord.com/download#">Discord
+                            <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                    <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <img src="" alt="">
+                    </li>
+                    <li>
+                        <a href="https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe">Steam
+                            <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                    <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <img src="" alt="">
+                    </li>
+                    <li>
+                        <a href="https://download.scdn.co/SpotifySetup.exe">Spotify
+                            <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                    <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </a>
+
+                        <img src="" alt="">
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="grid-container-coding">
+
+        <div class="grid-item-h1">
+
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9523 6.2635L10.4523 18.2635L9.04784 17.7368L13.5478 5.73682L14.9523 6.2635ZM19.1894 12.0001L15.9698 8.78042L17.0304 7.71976L21.3108 12.0001L17.0304 16.2804L15.9698 15.2198L19.1894 12.0001ZM8.03032 15.2198L4.81065 12.0002L8.03032 8.78049L6.96966 7.71983L2.68933 12.0002L6.96966 16.2805L8.03032 15.2198Z" fill="#ffffff"></path>
+                </g>
+            </svg>
+
+            <h1>Coding</h1>
+
+        </div>
+
+        <div style="padding-bottom: 22px;grid-template-rows: 90%;" class="grid-item">
+            <ul>
+                <div class="grid-items">
+                    <li>
+                        <a href="https://code.visualstudio.com/sha/download?build=stable&amp;os=win32-x64-user">VS Code
+                            <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                    <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <img src="" alt="">
+                    </li>
+                    <li>
+                        <a href="https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows">PyCharm
+                            <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                    <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <img src="" alt="">
+                    </li>
+                    <li>
+                        <a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&amp;channel=Release&amp;version=VS2022&amp;source=VSLandingPage&amp;cid=3652&amp;passive=false">Visual
+                            Studio 2022
+                            <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                    <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <img src="" alt="">
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/dist/v20.14.0/node-v20.14.0-x64.msi">Node.js
+                            <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                    <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <img src="" alt="">
+                    </li>
+                    <li>
+                        <a href="https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe">Python
+                            <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                    <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <img src="" alt="">
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="grid-container-game">
+
+        <div class="grid-item-h1">
+
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 5.25C11.25 6.07843 10.5784 6.75 9.75 6.75C8.92157 6.75 8.25 6.07843 8.25 5.25C8.25 4.42157 8.92157 3.75 9.75 3.75C10.5784 3.75 11.25 4.42157 11.25 5.25ZM12.75 5.25C12.75 6.64788 11.7939 7.82245 10.5 8.15549V9.75H15.375V11.25H10.5V14.25H17.8649L18.6149 18H19.5V19.5H17.3851L16.6351 15.75H15.75C15.75 19.0637 13.0637 21.75 9.75 21.75C6.43629 21.75 3.75 19.0637 3.75 15.75C3.75 12.6903 6.04027 10.1655 9 9.79642V8.15549C7.70608 7.82245 6.75 6.64788 6.75 5.25C6.75 3.59315 8.09315 2.25 9.75 2.25C11.4069 2.25 12.75 3.59315 12.75 5.25ZM9 15.75H14.25C14.25 18.2353 12.2353 20.25 9.75 20.25C7.26472 20.25 5.25 18.2353 5.25 15.75C5.25 13.5203 6.87171 11.6693 9 11.3122V15.75Z" fill="#ffffff"></path>
+                </g>
+            </svg>
+
+            <h1>Games</h1>
+
+        </div>
+
+        <div style="grid-template-rows: 90%;" class="grid-item">
+
+            <div class="grid-items">
+                <li>
+                    <a href="https://anticheat-client.faceit-cdn.net/FACEITInstaller_64.exe">FaceitAC
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <a href="https://itorrents-igruha.org/engine/download.php?id=60288">Elden ring
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <a href="https://itorrents-igruha.org/engine/download.php?id=62376">The Witcher 3
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <a href="https://ogotop.com/torrent/1223/Dead_Cells_v35.7.torrent">Dead Cells
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <a href="https://ogotop.com/torrent/0220/Devil_May_Cry_5_Deluxe_Edition_v1.0_build_3853173.torrent">Devil
+                        May Cry
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <a href="https://store.steampowered.com/app/730/CounterStrike_2/?l=russian" target="_blank">CS2
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <a href="">OSU!
+                        <svg style="width: 27px;" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier" style="margin-top: 100p;padding-top: 129px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.9853L15.182 12.8033L14.1213 11.7427L12.75 13.114L12.75 5.25L11.25 5.25L11.25 13.114L9.8787 11.7427L8.81804 12.8033L12 15.9853ZM12 13.864L12 13.864L12.0001 13.864L12 13.864Z" fill="#ffffff"></path>
+                                <path d="M18 17.25L18 18.75L6 18.75L6 17.25L18 17.25Z" fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <img src="" alt="">
+                </li>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+</body></html>
