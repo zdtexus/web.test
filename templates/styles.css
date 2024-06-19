@@ -70,7 +70,7 @@ svg {
     grid-column: 2 / 3;
     background: #212121;
     border: 1px solid #000000;
-    grid-template-rows: 8fr 5fr 531px 7fr 10fr 19fr;
+    grid-template-rows: 8fr 5fr 531px 7fr 10fr 15fr;
     width: 100%;
     height: 100%;
     border-radius: 10px;
