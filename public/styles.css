@@ -1,172 +1,171 @@
 body {
-            display: grid;
-            grid-template-columns: 1fr 3fr 1fr;
-            width: 100%;
-            background: #181818;
-            color: aliceblue;
-            font-weight: bold;
-        }
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    width: 100%;
+    background: #181818;
+    color: aliceblue;
+    font-weight: bold;
+}
 
-        h1 {
-            font-size: 36px;
-            color: #fff0f0;
-            padding-left: 8%;
-            margin-block-start: 0px;
-            margin-block-end: 0px;
-
-
-        }
-
-        h2 {
-            color: #fff0f0;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0px;
-            margin: 0px;
-            width: 100%;
-            height: 100%;
-        }
-
-        li {
-            width: 75%;
-            margin: auto;
-            list-style-type: none;
-        }
-
-        a {
-            font-size: 22px;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #fff0f0;
-        }
-
-        img {
-            display: none;
-        }
-
-        svg {
-            max-width: 46px;
-            margin-inline: auto;
-        }
+h1 {
+    font-size: 36px;
+    color: #fff0f0;
+    padding-left: 8%;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
 
 
-        .a-dif:hover {
-            transform: scale(3);
-            background: rgba(48, 41, 80, 0.3);
-            border-radius: 0% 15% 0% 15%;
-            padding: 2%;
+}
 
-        }
+h2 {
+    color: #fff0f0;
+}
 
-        .note {
-            color: red;
-            font-style: italic;
-        }
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
 
-        .main-grid-container {
-            display: grid;
-            grid-gap: 10px;
-            grid-column: 2 / 3;
-            background: #212121;
-            border: 1px solid #000000;
-            grid-template-rows: 8fr 5fr 531px 7fr 8fr 19fr;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-        }
+li {
+    width: 75%;
+    margin: auto;
+    list-style-type: none;
+}
 
-        .grid-container-drives {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            grid-template-rows: 100%;
-            height: 100%;
-            grid-gap: 10px;
-            border-bottom: 1px solid #000;
-        }
+a {
+    font-size: 22px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff0f0;
+}
 
-        .grid-container-basic {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            grid-gap: 10px;
-            border-bottom: 1px solid #000;
-            margin-bottom: -37px;
-        }
+img {
+    display: none;
+}
 
-        .grid-container-my {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            grid-template-rows: 100%;
-            height: 100%;
-            grid-gap: 10px;
-            border-bottom: 1px solid #000;
-        }
+svg {
+    max-width: 46px;
+    margin-inline: auto;
+}
 
-        .grid-container-coding {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            grid-template-rows: 100%;
-            height: 100%;
-            grid-gap: 10px;
-            border-bottom: 1px solid #000;
-        }
 
-        .grid-container-game {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            grid-template-rows: 100%;
-            height: 460px;
-            grid-gap: 10px;
-            border-bottom: 1px solid #000;
-            margin-top: -35px;
-        }
+.a-dif:hover {
+    transform: scale(3);
+    background: rgba(48, 41, 80, 0.3);
+    border-radius: 5px;
+    padding: 2px;
+}
 
-        .grid-item {
-            display: grid;
-            width: 80%;
-            height: 70%;
-            margin: auto;
-            background: #8774E1;
-            border-radius: 5px 50px 5px;
-            border: 1px solid #000000;
-            grid-template-rows: 2fr 5fr;
-            padding-bottom: 10px;
-        }
+.note {
+    color: red;
+    font-style: italic;
+}
 
-        .a-wr:hover {
+.main-grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-column: 2 / 3;
+    background: #212121;
+    border: 1px solid #000000;
+    grid-template-rows: 8fr 5fr 531px 7fr 10fr 19fr;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
 
-        }
+.grid-container-drives {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 100%;
+    height: 100%;
+    grid-gap: 10px;
+    border-bottom: 1px solid #000;
+}
 
-        .grid-item-h1 {
-            width: 74%;
-            height: 65%;
-            margin: auto;
-            margin-left: 24%;
-            display: grid;
-            grid-template-columns: 1fr 5fr;
-        }
+.grid-container-basic {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 10px;
+    border-bottom: 1px solid #000;
+    margin-bottom: -37px;
+}
 
-        .grid-item-h1-1 {
-            width: 74%;
-            height: 65%;
-            margin: auto;
-            margin-top: 80px;
-            display: grid;
-            grid-template-columns: 1fr 5fr;
-        }
+.grid-container-my {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 100%;
+    height: 100%;
+    grid-gap: 10px;
+    border-bottom: 1px solid #000;
+}
 
-        .grid-items {
-            display: grid;
-            height: 100%;
-            width: 100%;
-        }
+.grid-container-coding {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 100%;
+    height: 100%;
+    grid-gap: 10px;
+    border-bottom: 1px solid #000;
+}
 
-        .Windows-Reinstalling {
-            border-bottom: 1px solid #000;
-            display: grid;
-            width: 100%;
-            height: 100%;
-            align-content: center;
-            align-items: center;
-        }
+.grid-container-game {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 100%;
+    height: 460px;
+    grid-gap: 10px;
+    border-bottom: 1px solid #000;
+    margin-top: -35px;
+}
+
+.grid-item {
+    display: grid;
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    background: #8774E1;
+    border-radius: 5px 50px 5px;
+    border: 1px solid #000000;
+    grid-template-rows: 2fr 5fr;
+    padding-bottom: 10px;
+}
+
+.a-wr:hover {
+
+}
+
+.grid-item-h1 {
+    width: 74%;
+    height: 65%;
+    margin: auto;
+    margin-left: 24%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.grid-item-h1-1 {
+    width: 74%;
+    height: 65%;
+    margin: auto;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.grid-items {
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+
+.Windows-Reinstalling {
+    border-bottom: 1px solid #000;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    align-items: center;
+}
