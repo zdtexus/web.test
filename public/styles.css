@@ -70,7 +70,7 @@ a {
     margin-left: 7.5vw;
 }
 
-.main-grid-container {
+.main-container {
     display: grid;
     grid-column: 2 / 3;
     background: #212121;

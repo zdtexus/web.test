@@ -1,0 +1,83 @@
+@media (max-width: 1903px) {
+    .main-container {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 1800px) {
+    .main-container {
+    }
+}
+
+@media (max-width: 1600px) {
+    .main-container {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 1400px) {
+    .main-container {
+        width: clamp(746px, 60vw, 1000px);
+    }
+
+    .WindowsLink {
+        font-size: clamp(44px, 3.5vw, 49px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-container {
+        width: 746px;
+    }
+    .header-img {
+        width: clamp(30px, 7.3vw, 54px);
+    }
+}
+
+@media (max-width: 992px) {
+    .main-container {
+        width: 747px;
+    }
+    .WindowsLink {
+        font-size: clamp(44px, 3.5vw, 49px);
+    }
+}
+
+@media (max-width: 878px) {
+    .main-container {
+        width: 746px;
+    }
+
+    h1 {
+        font-size: clamp(25px, 4vw, 27px);
+    }
+
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        width: fit-content;
+        border: none;
+    }
+    .WindowsLink {
+        font-size: clamp(37px, 5.89vw, 44px);
+    }
+
+    h1 {
+        font-size: clamp(23px, 4vw, 60px);
+    }
+
+    .grid-h1 {
+        display: grid;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-container {
+        width: calc(100% - 0);
+    }
+
+    .WindowsLink {
+        font-size: clamp(31px, 6.789vw, 37px);
+    }
+}
