@@ -1,3 +1,17 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+  background-color: #aeaeae;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+  background-color: #424242;
+}
+
 @media (max-width: 1903px) {
     .main-container {
         width: 60vw;
@@ -60,7 +74,7 @@
         border: none;
     }
     .WindowsLink {
-        font-size: clamp(2px, 5.89vw, 44px);
+        font-size: clamp(37px, 5.89vw, 44px);
     }
 
     h1 {
@@ -78,6 +92,6 @@
     }
 
     .WindowsLink {
-        font-size: clamp(33px, 5.5vw, 440px);
+        font-size: clamp(31px, 6.789vw, 37px);
     }
 }
